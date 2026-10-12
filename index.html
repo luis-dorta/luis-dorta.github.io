@@ -49,6 +49,7 @@
   .btn { display: inline-block; background: var(--gold); color: var(--navy); font-weight: 800; padding: 15px 30px; border-radius: 6px; font-size: 15px; letter-spacing: 0.3px; transition: transform .15s; }
   .btn:hover { transform: translateY(-2px); }
   .btn-outline { display: inline-block; border: 2px solid rgba(255,255,255,0.4); color: var(--white); font-weight: 700; padding: 13px 28px; border-radius: 6px; font-size: 15px; margin-left: 14px; }
+  .headshot { width: 240px; height: 240px; border-radius: 50%; border: 6px solid var(--gold); object-fit: cover; display: block; margin: 0 auto; box-shadow: 0 18px 40px rgba(0,0,0,0.25); }
   .monogram-badge { width: 220px; height: 220px; border-radius: 50%; background: var(--white); border: 6px solid var(--gold); display: flex; align-items: center; justify-content: center; font-size: 76px; font-weight: 900; color: var(--navy); margin: 0 auto; }
 
   /* PROOF STRIP */
@@ -84,6 +85,22 @@
   .case-card .tag-row span { font-size: 11px; font-weight: 800; letter-spacing: 0.5px; text-transform: uppercase; color: var(--gold); background: rgba(184,134,43,0.1); padding: 4px 10px; border-radius: 4px; }
   .case-card h3 { color: var(--navy); font-size: 19px; margin-bottom: 10px; }
   .case-card p { color: var(--muted); font-size: 14.5px; margin-bottom: 14px; }
+  .case-card.featured { border: 2px solid var(--gold); padding: 36px; }
+  .featured-label { font-size: 12px; font-weight: 800; letter-spacing: 2px; text-transform: uppercase; color: var(--navy); margin-bottom: 12px; }
+  .mini-chart { background: #FAFAF8; border: 1px solid #EAEAE5; border-radius: 10px; padding: 18px 20px; margin: 4px 0 18px; max-width: 620px; }
+  .bar-row { display: grid; grid-template-columns: 140px 1fr 44px; align-items: center; gap: 12px; margin-bottom: 10px; font-size: 13px; }
+  .bar-label { color: var(--ink); font-weight: 600; }
+  .bar { height: 14px; background: var(--navy); border-radius: 0 4px 4px 0; display: block; }
+  .bar.weak { background: var(--slate); }
+  .bar-val { font-weight: 800; color: var(--navy); text-align: right; font-variant-numeric: tabular-nums; }
+  .bar-caption { font-size: 12px; color: var(--muted); margin-top: 4px; }
+  @media (max-width: 860px) {
+    .bar-row { grid-template-columns: 1fr 40px; row-gap: 4px; }
+    .bar-label { grid-column: 1 / -1; }
+    .hero-photo { order: -1; }
+    .hero .headshot { width: 160px; height: 160px; margin: 0 auto 8px; }
+    .hero .btn-outline { margin-left: 0; margin-top: 12px; }
+  }
   .case-card .result { font-weight: 800; color: var(--navy); font-size: 14px; }
   .case-card .result span { color: var(--gold); }
   .badge-inprogress { display: inline-block; background: var(--navy); color: var(--white); font-size: 11px; font-weight: 800; padding: 4px 10px; border-radius: 4px; letter-spacing: 0.5px; margin-bottom: 14px; }
@@ -121,7 +138,7 @@
   @media (max-width: 860px) {
     .hero .wrap { grid-template-columns: 1fr; text-align: center; }
     .hero p.lead { margin-left: auto; margin-right: auto; }
-    .monogram-badge { margin-top: 20px; }
+    .monogram-badge, .headshot { margin-top: 20px; }
     .about-grid, .resume-grid, .social-grid { grid-template-columns: 1fr; }
     .card-grid { grid-template-columns: 1fr; }
     .proof .wrap { grid-template-columns: 1fr; }
@@ -164,8 +181,8 @@
       <a href="#portfolio" class="btn">View My Work</a>
       <a href="#contact" class="btn-outline">Get In Touch</a>
     </div>
-    <div>
-      <div class="monogram-badge">LD</div>
+    <div class="hero-photo">
+      <img class="headshot" src="luis-dorta-headshot.jpg" alt="Luis Dorta" width="240" height="240">
     </div>
   </div>
 </header>
@@ -224,11 +241,43 @@
       <span>Marketing</span><span>Analytics</span><span>AI</span><span>Leadership</span><span>Sales</span><span>Coaching</span>
     </div>
     <div class="card-grid">
+      <div class="case-card featured" style="grid-column: 1 / -1;">
+        <div class="featured-label">Featured project</div>
+        <div class="tag-row"><span>Analytics</span><span>Google Ads</span><span>GA4</span></div>
+        <h3>MealCraft Kitchen: Cross-Channel Campaign Analysis</h3>
+        <p>Case study for my AI for Marketing certification (UNC Charlotte): turned a meal-kit brand's Meta Ads, Google Ads and GA4 data into insight cards with hypotheses, budget moves (stop / scale / shift) and two follow-up tests each, with a primary and guardrail KPI.</p>
+        <div class="mini-chart" role="img" aria-label="Return on ad spend by search segment: brand 3.2x, diet-intent 2.9x, generic 1.4x">
+          <div class="bar-row"><span class="bar-label">Brand search</span><span class="bar" style="width:100%"></span><span class="bar-val">3.2x</span></div>
+          <div class="bar-row"><span class="bar-label">Diet-intent</span><span class="bar" style="width:90.6%"></span><span class="bar-val">2.9x</span></div>
+          <div class="bar-row"><span class="bar-label">Generic "meal kit"</span><span class="bar weak" style="width:43.8%"></span><span class="bar-val">1.4x</span></div>
+          <div class="bar-caption">Return on ad spend by search segment, Jan&ndash;Mar 2025 (case-study data)</div>
+        </div>
+        <div class="result">Result: <span>Found brand and diet-intent search returning 3.2x and 2.9x ROAS vs 1.4x for generic terms, and recommended shifting budget toward high-intent keywords</span></div>
+      </div>
       <div class="case-card">
         <div class="tag-row"><span>Marketing</span><span>Sherwin-Williams</span></div>
         <h3>Dímelo Hispanic Pro Playbook</h3>
         <p>Built a bilingual customer-engagement playbook for Sherwin-Williams' Hispanic Pro segment from surveys, contractor interviews, and purchasing-behavior analysis.</p>
         <div class="result">Result: <span>2nd place, district presentation competition</span></div>
+      </div>
+      <div class="case-card">
+        <div class="tag-row"><span>AI</span><span>Automation</span><span>Make.com</span></div>
+        <h3>AI Brand-Reputation Monitor</h3>
+        <p>Built a Make.com automation that collects YouTube comments, batches them with an array aggregator, has OpenAI score sentiment and pull the top themes, and posts a monitoring update to Slack. Debugged the data mapping between modules until the summaries came through reliably.</p>
+        <div class="result">Result: <span>Working YouTube &rarr; OpenAI &rarr; Slack pipeline that replaces manual comment review</span></div>
+      </div>
+      <div class="case-card" style="grid-column: 1 / -1;">
+        <div class="tag-row"><span>AI</span><span>Product</span><span>Bilingual</span></div>
+        <img src="fact-or-fib.jpg" alt="Fact or Fib party game screens: room lobby with QR code, a round asking players to pick the real answer, and the final leaderboard with the Golden Fib" style="width: 100%; height: auto; border-radius: 10px; margin-bottom: 18px;" loading="lazy">
+        <h3>Fact or Fib: Multiplayer Party Game</h3>
+        <p>Directed ChatGPT as my developer to build a real-time party game for 2&ndash;8 players in 24 hours. Fact-checked the AI, adapted the jokes into Latin American Spanish instead of translating word for word, wrote bug reports, and pivoted to Firebase security rules when my first setup failed twice.</p>
+        <div class="result">Result: <span>Live game, playtested with friends</span> &middot; <a href="https://fact-or-fib.netlify.app" target="_blank" rel="noopener" style="color: var(--gold);">Play it</a> &middot; <a href="https://app.joinhandshake.com/ai-showcase/projects/3564119" target="_blank" rel="noopener" style="color: var(--gold);">Handshake showcase</a></div>
+      </div>
+      <div class="case-card">
+        <div class="tag-row"><span>Marketing</span><span>Branding</span><span>ADVC4020</span></div>
+        <h3>YETI Product Rebranding Campaign for Sustainability</h3>
+        <p>Group project (ADVC4020): a full rebrand strategy repositioning YETI around verifiable sustainability &mdash; brand audit, new positioning and brand elements, storyboard, and an integrated marketing communications plan, delivered as a narrated presentation. I analyzed YETI's current brand identity and developed the proposed new brand elements and the preliminary marketing program concept.</p>
+        <div class="result">Result: <span>Scored 98, 95 and 93.75 out of 100 across the three project phases</span></div>
       </div>
       <div class="case-card">
         <div class="tag-row"><span>Sales</span><span>Aptive Environmental</span></div>
@@ -248,53 +297,10 @@
         <p>Built a consistent training plan for an athlete whose confidence — not his ability — was holding him back.</p>
         <div class="result">Result: <span>Moved up to a higher competitive team</span></div>
       </div>
-      <div class="case-card">
-        <div class="tag-row"><span>Analytics</span><span>Google Ads</span><span>GA4</span></div>
-        <h3>MealCraft Kitchen: Cross-Channel Campaign Analysis</h3>
-        <p>Case study for my AI for Marketing certification (UNC Charlotte): turned a meal-kit brand's Meta Ads, Google Ads and GA4 data into insight cards with hypotheses, budget moves (stop / scale / shift) and two follow-up tests each, with a primary and guardrail KPI.</p>
-        <div class="result">Result: <span>Found brand and diet-intent search returning 3.2x and 2.9x ROAS vs 1.4x for generic terms, and recommended shifting budget toward high-intent keywords</span></div>
-      </div>
-      <div class="case-card">
-        <div class="tag-row"><span>AI</span><span>Automation</span><span>Make.com</span></div>
-        <h3>AI Brand-Reputation Monitor</h3>
-        <p>Built a Make.com automation that collects YouTube comments, batches them with an array aggregator, has OpenAI score sentiment and pull the top themes, and posts a monitoring update to Slack. Debugged the data mapping between modules until the summaries came through reliably.</p>
-        <div class="result">Result: <span>Working YouTube &rarr; OpenAI &rarr; Slack pipeline that replaces manual comment review</span></div>
-      </div>
-      <div class="case-card" style="grid-column: 1 / -1;">
-        <div class="tag-row"><span>AI</span><span>Product</span><span>Bilingual</span></div>
-        <img src="fact-or-fib.jpg" alt="Fact or Fib party game screens: room lobby with QR code, a round asking players to pick the real answer, and the final leaderboard with the Golden Fib" style="width: 100%; height: auto; border-radius: 10px; margin-bottom: 18px;" loading="lazy">
-        <h3>Fact or Fib: Multiplayer Party Game</h3>
-        <p>Directed ChatGPT as my developer to build a real-time party game for 2&ndash;8 players in 24 hours. Fact-checked the AI, adapted the jokes into Latin American Spanish instead of translating word for word, wrote bug reports, and pivoted to Firebase security rules when my first setup failed twice.</p>
-        <div class="result">Result: <span>Live game, playtested with friends</span> &middot; <a href="https://fact-or-fib.netlify.app" target="_blank" rel="noopener" style="color: var(--gold);">Play it</a> &middot; <a href="https://app.joinhandshake.com/ai-showcase/projects/3564119" target="_blank" rel="noopener" style="color: var(--gold);">Handshake showcase</a></div>
-      </div>
-      <div class="case-card" style="grid-column: 1 / -1;">
-        <div class="tag-row"><span>Marketing</span><span>Branding</span><span>ADVC4020</span></div>
-        <h3>YETI Product Rebranding Campaign for Sustainability</h3>
-        <p>Group project (ADVC4020): a full rebrand strategy repositioning YETI around verifiable sustainability &mdash; brand audit, new positioning and brand elements, storyboard, and an integrated marketing communications plan, delivered as a narrated presentation. I analyzed YETI's current brand identity and developed the proposed new brand elements and the preliminary marketing program concept.</p>
-        <div class="result">Result: <span>Scored 98, 95 and 93.75 out of 100 across the three project phases</span></div>
-      </div>
     </div>
   </div>
 </section>
 
-<section id="social">
-  <div class="wrap">
-    <div class="section-head">
-      <div class="eyebrow">Promotion</div>
-      <h2>Getting the word out</h2>
-      <p>Sample posts for launching this portfolio across LinkedIn and Instagram, built in the same navy-and-gold visual identity as the site.</p>
-    </div>
-    <div class="social-grid">
-      <img src="social-posts/instagram-post.png" alt="Instagram launch post mockup">
-      <div>
-        <img src="social-posts/linkedin-post.png" alt="LinkedIn launch post mockup" style="margin-bottom: 20px;">
-        <div class="social-note">
-          <strong>Rollout plan:</strong> the LinkedIn version posts first, pinned to my profile with the positioning statement in the caption; the Instagram version follows same-day to my personal account, tagging the site link in bio. Both carry the same navy/gold identity, headline, and URL as this page — one consistent brand, tailored per channel, same principle as the IMC plan in Phase 3.
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
 
 <section id="resume" style="background:#FAFAF8;">
   <div class="wrap">
