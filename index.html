@@ -1,153 +1,179 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Luis Dorta — People First. Results Proven.</title>
-<meta name="description" content="Personal brand portfolio of Luis Dorta, Marketing & Advertising student at Johnson & Wales University.">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Luis Dorta | People First. Results Proven.</title>
+<meta name="description" content="Personal brand portfolio of Luis Dorta, Marketing &amp; Advertising student at Johnson &amp; Wales University, building a coding foundation to back up his AI knowledge.">
+<meta property="og:title" content="Luis Dorta | People First. Results Proven.">
+<meta property="og:description" content="Marketing &amp; Advertising student at Johnson &amp; Wales University. Sales results, leadership, analytics and AI projects.">
+<meta property="og:image" content="https://luisdorta.me/luis-dorta-headshot.jpg">
+<meta property="og:url" content="https://luisdorta.me/">
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&family=Source+Serif+4:ital@0;1&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Inter+Tight:wght@600&display=swap" rel="stylesheet">
 <style>
-  :root {
-    --navy: #1F3552;
-    --navy-2: #24406A;
-    --gold: #B8862B;
-    --slate: #D9D9D9;
-    --ink: #1B1B1B;
-    --muted: #5A5A5A;
-    --white: #FFFFFF;
-  }
-  * { margin: 0; padding: 0; box-sizing: border-box; }
-  html { scroll-behavior: smooth; }
-  body { font-family: 'Montserrat', sans-serif; color: var(--ink); background: var(--white); line-height: 1.6; }
-  a { text-decoration: none; color: inherit; }
-  .wrap { max-width: 1100px; margin: 0 auto; padding: 0 32px; }
-  h1, h2, h3 { font-weight: 800; letter-spacing: -0.5px; }
+:root{
+  --bg:#ffffff; --surface:#f5f5f7; --ink:#1d1d1f; --ink-2:#6e6e73; --ink-3:#86868b;
+  --hair:#e8e8ed; --blue:#0071e3; --green:#1f7a3a;
+  --display:"Inter Tight",-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+  --body:Inter,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+[id]{scroll-margin-top:72px}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--body);-webkit-font-smoothing:antialiased;line-height:1.5}
+a{color:inherit}
+:focus-visible{outline:2px solid var(--blue);outline-offset:3px;border-radius:4px}
+.inner{width:min(1120px,100% - 48px);margin-inline:auto}
+.icon{width:22px;height:22px;stroke:currentColor;fill:none;stroke-width:1.75;stroke-linecap:round;stroke-linejoin:round;flex:none}
 
-  /* NAV */
-  nav {
-    position: sticky; top: 0; z-index: 100; background: var(--navy);
-    box-shadow: 0 2px 12px rgba(0,0,0,0.12);
-  }
-  nav .wrap { display: flex; align-items: center; justify-content: space-between; height: 72px; }
-  .brand { color: var(--white); font-weight: 800; font-size: 20px; letter-spacing: 1px; }
-  .brand span { color: var(--gold); }
-  .nav-links { display: flex; gap: 8px; list-style: none; }
-  .nav-links a { color: var(--slate); font-weight: 600; font-size: 14px; padding: 10px 16px; border-radius: 6px; transition: all .15s; letter-spacing: 0.3px; }
-  .nav-links a:hover { color: var(--white); background: rgba(255,255,255,0.08); }
+/* nav */
+.nav{position:sticky;top:0;z-index:50;height:64px;display:flex;align-items:center;
+  background:rgba(255,255,255,.82);backdrop-filter:saturate(180%) blur(20px);-webkit-backdrop-filter:saturate(180%) blur(20px);border-bottom:1px solid var(--hair)}
+.nav .inner{display:flex;align-items:center;justify-content:space-between;gap:32px}
+.wordmark{font-family:var(--display);font-size:16px;font-weight:600;letter-spacing:-.02em;text-decoration:none}
+.nav-links{display:flex;align-items:center;gap:30px}
+.nav-links a{font-size:13px;text-decoration:none;transition:color .2s}
+.nav-links a:hover{color:var(--blue)}
+.nav-links .nav-cta{font-weight:500;color:var(--blue)}
 
-  /* HERO */
-  .hero { background: linear-gradient(160deg, var(--navy) 0%, var(--navy-2) 100%); color: var(--white); position: relative; overflow: hidden; }
-  .hero-circle { position: absolute; border-radius: 50%; background: rgba(255,255,255,0.05); }
-  .hero-circle.c1 { width: 520px; height: 520px; top: -260px; right: -160px; }
-  .hero-circle.c2 { width: 320px; height: 320px; bottom: -180px; left: -120px; background: rgba(184,134,43,0.12); }
-  .hero .wrap { position: relative; padding: 96px 32px 88px; display: grid; grid-template-columns: 1.3fr 0.7fr; gap: 48px; align-items: center; }
-  .eyebrow { color: var(--gold); font-weight: 800; letter-spacing: 3px; font-size: 13px; text-transform: uppercase; margin-bottom: 18px; }
-  .hero h1 { font-size: 56px; line-height: 1.08; margin-bottom: 22px; }
-  .hero h1 .accent { color: var(--gold); }
-  .hero p.lead { font-size: 19px; color: var(--slate); max-width: 560px; margin-bottom: 34px; font-weight: 400; }
-  .btn { display: inline-block; background: var(--gold); color: var(--navy); font-weight: 800; padding: 15px 30px; border-radius: 6px; font-size: 15px; letter-spacing: 0.3px; transition: transform .15s; }
-  .btn:hover { transform: translateY(-2px); }
-  .btn-outline { display: inline-block; border: 2px solid rgba(255,255,255,0.4); color: var(--white); font-weight: 700; padding: 13px 28px; border-radius: 6px; font-size: 15px; margin-left: 14px; }
-  .headshot { width: 240px; height: 240px; border-radius: 50%; border: 6px solid var(--gold); object-fit: cover; display: block; margin: 0 auto; box-shadow: 0 18px 40px rgba(0,0,0,0.25); }
-  .monogram-badge { width: 220px; height: 220px; border-radius: 50%; background: var(--white); border: 6px solid var(--gold); display: flex; align-items: center; justify-content: center; font-size: 76px; font-weight: 900; color: var(--navy); margin: 0 auto; }
+/* hero */
+.hero{padding:88px 0 88px;text-align:center}
+.headshot{width:116px;height:116px;border-radius:50%;object-fit:cover;display:block;margin:0 auto 28px;
+  box-shadow:0 10px 30px rgba(0,0,0,.14);background:var(--surface)}
+.badge{display:inline-flex;align-items:center;gap:8px;padding:7px 15px;border-radius:980px;background:var(--surface);font-size:13px;font-weight:500}
+.dot{width:7px;height:7px;border-radius:50%;background:#30d158;display:inline-block}
+h1{font-family:var(--display);font-size:clamp(42px,6.2vw,84px);line-height:1.05;letter-spacing:-.04em;font-weight:600;margin:26px auto 0;max-width:1040px}
+.lead{font-size:clamp(17px,1.5vw,21px);line-height:1.5;color:var(--ink-2);max-width:720px;margin:26px auto 0}
+.actions{display:flex;align-items:center;justify-content:center;gap:18px 24px;flex-wrap:wrap;margin-top:40px}
+.btn{display:inline-flex;align-items:center;gap:8px;padding:14px 28px;border-radius:980px;background:var(--blue);color:#fff;font-size:16px;font-weight:500;text-decoration:none;transition:opacity .2s}
+.btn:hover{opacity:.88}
+.btn-ghost{display:inline-flex;align-items:center;gap:8px;padding:12px 26px;border-radius:980px;border:1px solid #c7c7cc;font-size:15px;font-weight:500;text-decoration:none;transition:background .2s}
+.btn-ghost:hover{background:var(--surface)}
+.link-cta{display:inline-flex;align-items:center;gap:6px;font-size:16px;font-weight:500;color:var(--blue);text-decoration:none;padding:14px 10px}
+.rail{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px;margin-top:72px;padding-top:40px;border-top:1px solid var(--hair);text-align:left}
+.rail .v{font-family:var(--display);font-size:38px;font-weight:600;letter-spacing:-.035em;margin:0 0 6px}
+.rail .l{margin:0;font-size:13px;line-height:1.45;color:var(--ink-2)}
 
-  /* PROOF STRIP */
-  .proof { background: var(--white); border-bottom: 1px solid #EDEDED; }
-  .proof .wrap { padding: 40px 32px; display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; text-align: center; }
-  .proof .stat-num { font-size: 40px; font-weight: 900; color: var(--navy); }
-  .proof .stat-label { font-size: 14px; color: var(--muted); font-weight: 600; margin-top: 4px; text-transform: uppercase; letter-spacing: 0.5px; }
+/* sections */
+.section{padding:128px 0}
+.alt{background:var(--surface)}
+.split{display:grid;grid-template-columns:200px minmax(0,1fr);gap:64px;align-items:start}
+.eyebrow-label{font-size:14px;font-weight:500;color:var(--ink-2);margin:0}
+.stack{display:flex;flex-direction:column;gap:32px}
+.h2{font-family:var(--display);font-size:clamp(28px,3.2vw,46px);line-height:1.1;letter-spacing:-.035em;font-weight:600;margin:0}
+.h3{font-family:var(--display);font-size:20px;letter-spacing:-.02em;font-weight:600;margin:0 0 10px}
+.sub{font-size:19px;line-height:1.55;color:var(--ink-2);margin:0;max-width:680px}
+.body-lg{font-size:18px;line-height:1.62;color:var(--ink-2);margin:0}
+.body-lg + .body-lg{margin-top:18px}
+.quote{background:var(--ink);color:#f5f5f7;border-radius:28px;padding:40px;font-size:19px;line-height:1.6;letter-spacing:-.01em;margin:0}
+.chip-type{display:inline-block;background:#fff;border:1px solid var(--hair);border-radius:980px;padding:6px 14px;font-size:13px;font-weight:600;margin-bottom:16px}
+.diff{list-style:none;margin:0;padding:0}
+.diff li{padding:14px 0;border-bottom:1px solid #dcdce2;font-size:16px;color:var(--ink)}
+.diff li:first-child{border-top:1px solid #dcdce2}
+.pillars{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:32px}
+.pillar{border-top:1px solid #dcdce2;padding-top:20px}
+.pillar .icon{margin-bottom:10px}
+.pillar h4{margin:0 0 8px;font-size:16px;font-weight:600}
+.pillar p{margin:0;font-size:14px;line-height:1.55;color:var(--ink-2)}
 
-  section { padding: 88px 0; }
-  .section-head { margin-bottom: 44px; max-width: 700px; }
-  .section-head .eyebrow { color: var(--gold); }
-  .section-head h2 { font-size: 36px; color: var(--navy); margin-bottom: 12px; }
-  .section-head p { color: var(--muted); font-size: 17px; }
+/* portfolio cards */
+.cards{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px}
+.card{background:var(--surface);border-radius:28px;padding:36px;display:flex;flex-direction:column;gap:14px}
+.card.wide{grid-column:1 / -1}
+.card h3{font-family:var(--display);font-size:22px;line-height:1.2;letter-spacing:-.025em;font-weight:600;margin:0}
+.card p{margin:0;font-size:15px;line-height:1.6;color:var(--ink-2)}
+.tags{display:flex;flex-wrap:wrap;gap:8px}
+.tags span{font-size:11px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--ink-2);background:#fff;border-radius:980px;padding:5px 11px}
+.card .result{font-size:14px;line-height:1.55;color:var(--ink);margin-top:auto;padding-top:4px}
+.result b{font-weight:600}
+.result a{color:var(--blue);text-decoration:none}
+.result a:hover{text-decoration:underline}
+.featured-label{font-size:12px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--ink-3);margin:0}
+.chart{background:#fff;border-radius:18px;padding:20px 22px;max-width:640px}
+.bar-row{display:grid;grid-template-columns:150px minmax(0,1fr) 44px;align-items:center;gap:12px;margin-bottom:10px;font-size:13px}
+.bar-label{font-weight:500}
+.bar{height:12px;background:var(--ink);border-radius:0 6px 6px 0;display:block}
+.bar.weak{background:#c7c7cc}
+.bar-val{font-weight:600;text-align:right;font-variant-numeric:tabular-nums}
+.bar-caption{font-size:12px;color:var(--ink-2);margin-top:6px}
+.card.dark{background:#000;color:#f5f5f7}
+.card.dark p{color:#a1a1a6}
+.card.dark h3{color:#f5f5f7;font-size:clamp(26px,2.8vw,36px)}
+.card.dark .tags span{background:#1c1c1e;color:#a1a1a6}
+.card.dark .result{color:#f5f5f7}
+.card.dark .result a{color:#4da3ff}
+.shot{width:100%;height:auto;border-radius:18px;display:block;background:#111}
 
-  /* ABOUT */
-  #about { background: #FAFAF8; }
-  .about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 56px; align-items: start; }
-  .positioning-card { background: var(--navy); color: var(--white); padding: 36px; border-radius: 10px; font-size: 18px; line-height: 1.65; font-family: 'Source Serif 4', serif; font-style: italic; border-left: 6px solid var(--gold); }
-  .about-body h3 { color: var(--navy); font-size: 20px; margin-bottom: 10px; }
-  .about-body p { color: var(--muted); margin-bottom: 22px; font-size: 15.5px; }
-  .type-chip { display: inline-block; background: rgba(184,134,43,0.12); color: var(--gold); font-weight: 800; padding: 6px 14px; border-radius: 20px; font-size: 13px; margin-bottom: 16px; letter-spacing: 0.3px; }
-  .diff-list { list-style: none; }
-  .diff-list li { padding: 10px 0 10px 28px; position: relative; color: var(--ink); font-size: 15px; border-bottom: 1px solid #EAEAE5; }
-  .diff-list li::before { content: '—'; position: absolute; left: 0; color: var(--gold); font-weight: 800; }
+/* resume */
+.resume-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:56px}
+.resume-block h3{font-family:var(--display);font-size:20px;letter-spacing:-.02em;margin:0 0 16px;padding-bottom:10px;border-bottom:1px solid #dcdce2;font-weight:600}
+.resume-block h3:not(:first-child){margin-top:36px}
+.item{margin-bottom:20px}
+.item .title{font-weight:600;font-size:16px}
+.item .meta{font-size:13px;color:var(--ink-2);margin:2px 0 4px}
+.item p{margin:0;font-size:14px;line-height:1.55;color:var(--ink-2)}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:8px}
+.chips span,.chips a{background:#fff;border-radius:980px;padding:7px 14px;font-size:13px;font-weight:500;text-decoration:none}
+.chips a{color:var(--blue)}
+.chips a:hover{text-decoration:underline}
+.skill-group{font-size:12px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--ink-3);margin-top:18px}
+.resume-link{color:var(--blue);text-decoration:none;font-weight:500}
 
-  /* PORTFOLIO */
-  .filter-tags { display: flex; gap: 10px; margin-bottom: 36px; flex-wrap: wrap; }
-  .filter-tags span { background: #F0EFEA; color: var(--navy); font-weight: 700; font-size: 13px; padding: 8px 16px; border-radius: 20px; }
-  .card-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 24px; }
-  .case-card { background: var(--white); border: 1px solid #EAEAE5; border-radius: 12px; padding: 30px; transition: box-shadow .2s, transform .2s; }
-  .case-card:hover { box-shadow: 0 14px 30px rgba(31,53,82,0.10); transform: translateY(-3px); }
-  .case-card .tag-row { display: flex; gap: 8px; margin-bottom: 16px; }
-  .case-card .tag-row span { font-size: 11px; font-weight: 800; letter-spacing: 0.5px; text-transform: uppercase; color: var(--gold); background: rgba(184,134,43,0.1); padding: 4px 10px; border-radius: 4px; }
-  .case-card h3 { color: var(--navy); font-size: 19px; margin-bottom: 10px; }
-  .case-card p { color: var(--muted); font-size: 14.5px; margin-bottom: 14px; }
-  .case-card.featured { border: 2px solid var(--gold); padding: 36px; }
-  .featured-label { font-size: 12px; font-weight: 800; letter-spacing: 2px; text-transform: uppercase; color: var(--navy); margin-bottom: 12px; }
-  .mini-chart { background: #FAFAF8; border: 1px solid #EAEAE5; border-radius: 10px; padding: 18px 20px; margin: 4px 0 18px; max-width: 620px; }
-  .bar-row { display: grid; grid-template-columns: 140px 1fr 44px; align-items: center; gap: 12px; margin-bottom: 10px; font-size: 13px; }
-  .bar-label { color: var(--ink); font-weight: 600; }
-  .bar { height: 14px; background: var(--navy); border-radius: 0 4px 4px 0; display: block; }
-  .bar.weak { background: var(--slate); }
-  .bar-val { font-weight: 800; color: var(--navy); text-align: right; font-variant-numeric: tabular-nums; }
-  .bar-caption { font-size: 12px; color: var(--muted); margin-top: 4px; }
-  @media (max-width: 860px) {
-    .bar-row { grid-template-columns: 1fr 40px; row-gap: 4px; }
-    .bar-label { grid-column: 1 / -1; }
-    .hero-photo { order: -1; }
-    .hero .headshot { width: 160px; height: 160px; margin: 0 auto 8px; }
-    .hero .btn-outline { margin-left: 0; margin-top: 12px; }
-  }
-  .case-card .result { font-weight: 800; color: var(--navy); font-size: 14px; }
-  .case-card .result span { color: var(--gold); }
-  .badge-inprogress { display: inline-block; background: var(--navy); color: var(--white); font-size: 11px; font-weight: 800; padding: 4px 10px; border-radius: 4px; letter-spacing: 0.5px; margin-bottom: 14px; }
+/* contact */
+.contact{text-align:center}
+.contact .h2{font-size:clamp(32px,4vw,52px)}
+.contact .sub{margin:18px auto 0;text-align:center}
+.grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:16px;margin-top:48px;text-align:left}
+.tile{display:flex;flex-direction:column;justify-content:space-between;gap:36px;min-height:176px;padding:24px;border-radius:22px;background:var(--bg);text-decoration:none;transition:transform .2s ease,box-shadow .2s ease}
+.tile:hover{transform:translateY(-2px);box-shadow:0 8px 30px rgba(0,0,0,.07)}
+.tile-top{display:flex;align-items:center;justify-content:space-between}
+.arrow{color:#c7c7cc}
+.tile h4{margin:0 0 4px;font-size:17px;font-weight:600;letter-spacing:-.02em}
+.tile p{margin:0;font-size:13px;color:var(--ink-2)}
+.note{margin:36px auto 0;font-size:13.5px;color:var(--ink-2);max-width:520px}
 
-  /* SOCIAL PROMO */
-  #social { background: #FAFAF8; }
-  .social-grid { display: grid; grid-template-columns: 1fr 1.4fr; gap: 28px; align-items: start; }
-  .social-grid img { width: 100%; border-radius: 12px; box-shadow: 0 16px 40px rgba(31,53,82,0.15); display: block; }
-  .social-note { background: var(--white); border: 1px solid #EAEAE5; border-radius: 12px; padding: 28px; font-size: 14.5px; color: var(--muted); }
-  .social-note strong { color: var(--navy); }
+.footer{border-top:1px solid var(--hair);padding:36px 0}
+.footer .inner{display:flex;align-items:center;justify-content:space-between;gap:24px;flex-wrap:wrap}
+.footer p{margin:0;font-size:13px;color:var(--ink-2)}
+.footer nav{display:flex;gap:24px;flex-wrap:wrap}
+.footer a{font-size:13px;color:var(--ink-2);text-decoration:none}
+.footer a:hover{color:var(--ink)}
 
-  /* RESUME */
-  .resume-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 48px; }
-  .resume-block h3 { color: var(--navy); font-size: 18px; margin-bottom: 14px; border-bottom: 2px solid var(--gold); padding-bottom: 8px; }
-  .resume-item { margin-bottom: 18px; }
-  .resume-item .title { font-weight: 700; font-size: 15px; color: var(--ink); }
-  .resume-item .meta { font-size: 13px; color: var(--gold); font-weight: 600; margin-bottom: 4px; }
-  .resume-item p { font-size: 14px; color: var(--muted); }
-  .cert-row { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 8px; }
-  .skill-group { font-size: 12px; font-weight: 800; letter-spacing: 0.5px; text-transform: uppercase; color: var(--gold); margin-top: 14px; }
-  .cert-row span { background: #F0EFEA; color: var(--navy); font-size: 13px; font-weight: 700; padding: 8px 14px; border-radius: 6px; }
-
-  /* CONTACT */
-  #contact { background: var(--navy); color: var(--white); text-align: center; }
-  #contact h2 { color: var(--white); font-size: 38px; margin-bottom: 14px; }
-  #contact p.lead { color: var(--slate); font-size: 17px; margin-bottom: 32px; }
-  .contact-actions { display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; }
-  .contact-actions .btn-outline { margin-left: 0; }
-  .alumni-note { margin-top: 36px; font-size: 13.5px; color: var(--slate); max-width: 480px; margin-left: auto; margin-right: auto; }
-
-  footer { background: #16273F; color: var(--slate); padding: 28px 0; text-align: center; font-size: 13px; }
-  footer .wrap { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 12px; }
-  footer a { color: var(--gold); font-weight: 600; }
-
-  @media (max-width: 860px) {
-    .hero .wrap { grid-template-columns: 1fr; text-align: center; }
-    .hero p.lead { margin-left: auto; margin-right: auto; }
-    .monogram-badge, .headshot { margin-top: 20px; }
-    .about-grid, .resume-grid, .social-grid { grid-template-columns: 1fr; }
-    .card-grid { grid-template-columns: 1fr; }
-    .proof .wrap { grid-template-columns: 1fr; }
-    .nav-links { display: none; }
-    .hero h1 { font-size: 38px; }
-  }
+@media (max-width:900px){
+  .section{padding:96px 0}
+  .split{grid-template-columns:1fr;gap:26px}
+  .hero{padding:64px 0 72px}
+  .rail{margin-top:56px}
+  .cards{grid-template-columns:1fr}
+  .resume-grid{grid-template-columns:1fr;gap:44px}
+  .grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .nav-links{gap:18px}
+}
+@media (max-width:620px){
+  .section{padding:64px 0}
+  .nav{height:56px}
+  .nav-links a:not(.nav-cta){display:none}
+  .hero{padding:44px 0 56px}
+  .headshot{width:96px;height:96px;margin-bottom:22px}
+  .rail{grid-template-columns:1fr;gap:26px;margin-top:44px;padding-top:32px}
+  .pillars{grid-template-columns:1fr;gap:24px}
+  .body-lg,.sub{font-size:17px}
+  .quote{padding:28px 24px;font-size:17px;border-radius:24px}
+  .card{padding:26px 22px;border-radius:24px}
+  .bar-row{grid-template-columns:minmax(0,1fr) 40px;row-gap:4px}
+  .bar-label{grid-column:1 / -1}
+  .grid{grid-template-columns:1fr}
+  .tile{min-height:0}
+  .footer .inner{flex-direction:column;align-items:flex-start;gap:14px}
+  .footer nav{flex-direction:column;gap:8px}
+}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}.tile{transition:none}}
 </style>
+
 <!-- PostHog analytics: page views, clicks, and visitor sources -->
-<script>
+<script type="text/javascript" crossorigin="anonymous" async="" src="https://us-assets.i.posthog.com/static/array.js"></script><script>
   !function(t,e){var o,n,p,r;e.__SV||(window.posthog=e,e._i=[],e.init=function(i,s,a){function g(t,e){var o=e.split(".");2==o.length&&(t=t[o[0]],e=o[1]),t[e]=function(){t.push([e].concat(Array.prototype.slice.call(arguments,0)))}}(p=t.createElement("script")).type="text/javascript",p.crossOrigin="anonymous",p.async=!0,p.src=s.api_host.replace(".i.posthog.com","-assets.i.posthog.com")+"/static/array.js",(r=t.getElementsByTagName("script")[0]).parentNode.insertBefore(p,r);var u=e;for(void 0!==a?u=e[a]=[]:a="posthog",u.people=u.people||[],u.toString=function(t){var e="posthog";return"posthog"!==a&&(e+="."+a),t||(e+=" (stub)"),e},u.people.toString=function(){return u.toString(1)+".people (stub)"},o="capture identify alias people.set people.set_once set_config register register_once unregister opt_out_capturing has_opted_out_capturing opt_in_capturing reset isFeatureEnabled onFeatureFlags getFeatureFlag getFeatureFlagPayload reloadFeatureFlags group getSurveys getActiveMatchingSurveys onSessionId startSessionRecording stopSessionRecording".split(" "),n=0;n<o.length;n++)g(u,o[n]);e._i.push([i,s,a])},e.__SV=1)}(document,window.posthog||[]);
   posthog.init('phc_AruKzyih9gNxUcfLPMTZGcEPvxLg28egFZ5mwNj83iAT', {
     api_host: 'https://us.i.posthog.com',
@@ -157,248 +183,264 @@
 </head>
 <body>
 
-<nav>
-  <div class="wrap">
-    <div class="brand">LUIS <span>DORTA</span></div>
-    <ul class="nav-links">
-      <li><a href="#home">Home</a></li>
-      <li><a href="#about">About</a></li>
-      <li><a href="#portfolio">Portfolio</a></li>
-      <li><a href="#resume">Resume</a></li>
-      <li><a href="#contact">Contact</a></li>
-    </ul>
+<nav class="nav" aria-label="Main">
+  <div class="inner">
+    <a class="wordmark" href="#home">Luis Dorta</a>
+    <div class="nav-links">
+      <a href="#home">Home</a>
+      <a href="#about">About</a>
+      <a href="#portfolio">Portfolio</a>
+      <a href="#resume">Resume</a>
+      <a class="nav-cta" href="#contact">Contact</a>
+    </div>
   </div>
 </nav>
 
 <header class="hero" id="home">
-  <div class="hero-circle c1"></div>
-  <div class="hero-circle c2"></div>
-  <div class="wrap">
-    <div>
-      <div class="eyebrow">Marketing &amp; Advertising · Johnson &amp; Wales University</div>
-      <h1>People First.<br><span class="accent">Results Proven.</span></h1>
-      <p class="lead">For employers and clients who need a marketer who can turn a plan into people moving toward a shared goal — I pair core marketing fundamentals with a proven record of leading individuals and teams to measurable results.</p>
-      <a href="#portfolio" class="btn">View My Work</a>
-      <a href="#contact" class="btn-outline">Get In Touch</a>
-      <a href="Luis_Dorta_Resume.pdf" class="btn-outline" download>Download Resume (PDF)</a>
+  <div class="inner">
+    <img class="headshot" src="luis-dorta-headshot.jpg" alt="Luis Dorta" width="116" height="116">
+    <span class="badge"><span class="dot" aria-hidden="true"></span>Open to 2027 marketing &amp; AI roles</span>
+    <h1>People first.<br>Results proven.</h1>
+    <p class="lead">For employers and clients who need a marketer who can turn a plan into people moving toward a shared goal. I pair core marketing fundamentals with a proven record of leading individuals and teams to measurable results, and I'm building the coding foundation to back up my AI knowledge.</p>
+    <div class="actions">
+      <a class="btn" href="#portfolio">View my work</a>
+      <a class="link-cta" href="#contact">Get in touch <svg class="icon" style="width:16px;height:16px" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+      <a class="btn-ghost" href="Luis_Dorta_Resume.pdf" download>Download resume (PDF)</a>
     </div>
-    <div class="hero-photo">
-      <img class="headshot" src="luis-dorta-headshot.jpg" alt="Luis Dorta" width="240" height="240">
+    <div class="rail">
+      <div><p class="v">$217K+</p><p class="l">Revenue generated · Aptive Sales</p></div>
+      <div><p class="v">60+</p><p class="l">Residents led · JWU Resident Assistant</p></div>
+      <div><p class="v">50+</p><p class="l">Families coached · Soccer Genome</p></div>
     </div>
   </div>
 </header>
 
-<div class="proof">
-  <div class="wrap">
-    <div>
-      <div class="stat-num">$217K+</div>
-      <div class="stat-label">Revenue Generated · Aptive Sales</div>
-    </div>
-    <div>
-      <div class="stat-num">60+</div>
-      <div class="stat-label">Residents Led · JWU Resident Assistant</div>
-    </div>
-    <div>
-      <div class="stat-num">50+</div>
-      <div class="stat-label">Families Coached · Soccer Genome</div>
-    </div>
-  </div>
-</div>
-
-<section id="about">
-  <div class="wrap">
-    <div class="section-head">
-      <div class="eyebrow">About</div>
-      <h2>The story behind the positioning</h2>
-      <p>A brand built on people-first leadership, backed by measurable outcomes.</p>
-    </div>
-    <div class="about-grid">
-      <div class="positioning-card">
-        "For employers and clients who need a marketer who can turn a plan into people moving toward a shared goal, Luis Dorta is the emerging marketing professional who pairs core marketing fundamentals with a proven record of leading individuals and teams to measurable results — because unlike peers who compete on coursework and certifications alone, Luis has already grown accounts to six figures, led 60+ residents, and coached individual growth to a visible outcome."
+<section class="section alt" id="about">
+  <div class="inner split">
+    <p class="eyebrow-label">About</p>
+    <div class="stack">
+      <h2 class="h2">The story behind the positioning.</h2>
+      <p class="sub">A brand built on people-first leadership, backed by measurable outcomes.</p>
+      <blockquote class="quote">"For employers and clients who need a marketer who can turn a plan into people moving toward a shared goal, Luis Dorta is the emerging marketing professional who pairs core marketing fundamentals with a proven record of leading individuals and teams to measurable results. Unlike peers who compete on coursework and certifications alone, Luis has already grown accounts to six figures, led 60+ residents, and coached individual growth to a visible outcome."</blockquote>
+      <div>
+        <span class="chip-type">ENFJ-A · "The Protagonist"</span>
+        <h3 class="h3">My story</h3>
+        <p class="body-lg">As an ENFJ-A, I lead through people while staying structured enough to turn a vision into a plan others can follow. That shows up directly in results I can point to: six figures in revenue generated across 150+ accounts at Aptive, leadership for 60+ residents and support for 300+ students as a Resident Assistant at JWU, marketing my private soccer training to 50+ families, and coaching an athlete at Soccer Genome whose confidence, not his ability, was holding him back, until a consistent plan moved him up to a higher team.</p>
       </div>
-      <div class="about-body">
-        <div class="type-chip">ENFJ-A · "The Protagonist"</div>
-        <h3>My Story</h3>
-        <p>As an ENFJ-A, I lead through people while staying structured enough to turn a vision into a plan others can follow — and that shows up directly in results I can point to: six figures in revenue generated across hundreds of accounts at Aptive, leadership for 60+ residents and support for 300+ students as a Resident Assistant at JWU, marketing my private soccer training to 50+ families, and coaching an athlete at Soccer Genome whose confidence — not his ability — was holding him back, until a consistent plan moved him up to a higher team.</p>
-        <h3>Points of Difference</h3>
-        <ul class="diff-list">
+      <div>
+        <h3 class="h3">Building the technical layer</h3>
+        <p class="body-lg">I'm building a coding foundation to back up my AI knowledge. The more I leaned on AI tools, the less satisfied I was treating them as a black box, so I started learning the layer underneath: Python fundamentals, data workflows, and the habit of shipping small things until they work. The goal isn't to become a developer first. It's to be the marketer who understands how the system actually works, and can build the first version of it.</p>
+      </div>
+      <div class="pillars">
+        <div class="pillar">
+          <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="m16 18 6-6-6-6M8 6l-6 6 6 6"/></svg>
+          <h4>Python fundamentals</h4>
+          <p>Kaggle certified in Intro to Programming and Python, working through the basics end to end.</p>
+        </div>
+        <div class="pillar">
+          <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="8" height="8" rx="2"/><path d="M7 11v4a2 2 0 0 0 2 2h4"/><rect x="13" y="13" width="8" height="8" rx="2"/></svg>
+          <h4>Systems &amp; automation</h4>
+          <p>Pipelines that turn messy inputs into something useful, from AI prompts to Make.com runs.</p>
+        </div>
+        <div class="pillar">
+          <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M4.5 16.5c-1.5 1.26-2 5-2 5s3.74-.5 5-2c.71-.84.7-2.13-.09-2.91a2.18 2.18 0 0 0-2.91-.09z"/><path d="m12 15-3-3a22 22 0 0 1 2-3.95A12.88 12.88 0 0 1 22 2c0 2.72-.78 7.5-6 11a22.35 22.35 0 0 1-4 2z"/><path d="M9 12H4s.55-3.03 2-4c1.62-1.08 5 0 5 0"/><path d="M12 15v5s3.03-.55 4-2c1.08-1.62 0-5 0-5"/></svg>
+          <h4>Shipping in public</h4>
+          <p>A live multiplayer game in 24 hours. Built, broken, playtested and fixed.</p>
+        </div>
+      </div>
+      <div>
+        <h3 class="h3">Points of difference</h3>
+        <ul class="diff">
           <li>Most marketing students compete on coursework and certifications alone.</li>
-          <li>I've already led people to a measurable result outside the classroom — in sales, in coaching, and in residence life leadership — before finishing my degree.</li>
-          <li>Certifications held: Microsoft Excel, Google Ads, AI for Marketing (UNC Charlotte), SAS Data Literacy for Business.</li>
+          <li>I've already led people to a measurable result outside the classroom, in sales, in coaching, and in residence life leadership, before finishing my degree.</li>
+          <li>Certifications held: Microsoft Excel, Google Ads, AI for Marketing (UNC Charlotte), SAS Data Literacy for Business, and Intro to Programming and Python (Kaggle).</li>
         </ul>
       </div>
     </div>
   </div>
 </section>
 
-<section id="portfolio">
-  <div class="wrap">
-    <div class="section-head">
-      <div class="eyebrow">Selected Work</div>
-      <h2>Proof points, not a skills list</h2>
-      <p>Each project below is traceable to a specific mentor, credential, or role — not a generic bullet.</p>
-    </div>
-    <div class="filter-tags">
-      <span>Marketing</span><span>Analytics</span><span>AI</span><span>Leadership</span><span>Sales</span><span>Coaching</span>
-    </div>
-    <div class="card-grid">
-      <div class="case-card featured" style="grid-column: 1 / -1;">
-        <div class="featured-label">Featured project</div>
-        <div class="tag-row"><span>Analytics</span><span>Google Ads</span><span>GA4</span></div>
-        <h3>MealCraft Kitchen: Cross-Channel Campaign Analysis</h3>
-        <p>Case study for my AI for Marketing certification (UNC Charlotte): turned a meal-kit brand's Meta Ads, Google Ads and GA4 data into insight cards with hypotheses, budget moves (stop / scale / shift) and two follow-up tests each, with a primary and guardrail KPI.</p>
-        <div class="mini-chart" role="img" aria-label="Return on ad spend by search segment: brand 3.2x, diet-intent 2.9x, generic 1.4x">
-          <div class="bar-row"><span class="bar-label">Brand search</span><span class="bar" style="width:100%"></span><span class="bar-val">3.2x</span></div>
-          <div class="bar-row"><span class="bar-label">Diet-intent</span><span class="bar" style="width:90.6%"></span><span class="bar-val">2.9x</span></div>
-          <div class="bar-row"><span class="bar-label">Generic "meal kit"</span><span class="bar weak" style="width:43.8%"></span><span class="bar-val">1.4x</span></div>
-          <div class="bar-caption">Return on ad spend by search segment, Jan&ndash;Mar 2025 (case-study data)</div>
-        </div>
-        <div class="result">Result: <span>Found brand and diet-intent search returning 3.2x and 2.9x ROAS vs 1.4x for generic terms, and recommended shifting budget toward high-intent keywords</span></div>
-      </div>
-      <div class="case-card">
-        <div class="tag-row"><span>Marketing</span><span>Sherwin-Williams</span></div>
-        <h3>Dímelo Hispanic Pro Playbook</h3>
-        <p>Built a bilingual customer-engagement playbook for Sherwin-Williams' Hispanic Pro segment from surveys, contractor interviews, and purchasing-behavior analysis.</p>
-        <div class="result">Result: <span>2nd place, district presentation competition</span></div>
-      </div>
-      <div class="case-card">
-        <div class="tag-row"><span>AI</span><span>Automation</span><span>Make.com</span></div>
-        <h3>AI Brand-Reputation Monitor</h3>
-        <p>Built a Make.com automation that collects YouTube comments, batches them with an array aggregator, has OpenAI score sentiment and pull the top themes, and posts a monitoring update to Slack. Debugged the data mapping between modules until the summaries came through reliably.</p>
-        <div class="result">Result: <span>Working YouTube &rarr; OpenAI &rarr; Slack pipeline that replaces manual comment review</span></div>
-      </div>
-      <div class="case-card" style="grid-column: 1 / -1;">
-        <div class="tag-row"><span>AI</span><span>Product</span><span>Bilingual</span></div>
-        <img src="fact-or-fib.jpg" alt="Fact or Fib party game screens: room lobby with QR code, a round asking players to pick the real answer, and the final leaderboard with the Golden Fib" style="width: 100%; height: auto; border-radius: 10px; margin-bottom: 18px;" loading="lazy">
-        <h3>Fact or Fib: Multiplayer Party Game</h3>
-        <p>Directed ChatGPT as my developer to build a real-time party game for 2&ndash;8 players in 24 hours. Fact-checked the AI, adapted the jokes into Latin American Spanish instead of translating word for word, wrote bug reports, and pivoted to Firebase security rules when my first setup failed twice.</p>
-        <div class="result">Result: <span>Live game, playtested with friends</span> &middot; <a href="https://fact-or-fib.netlify.app" target="_blank" rel="noopener" style="color: var(--gold);">Play it</a> &middot; <a href="https://app.joinhandshake.com/ai-showcase/projects/3564119" target="_blank" rel="noopener" style="color: var(--gold);">Handshake showcase</a></div>
-      </div>
-      <div class="case-card">
-        <div class="tag-row"><span>Marketing</span><span>Branding</span><span>ADVC4020</span></div>
-        <h3>YETI Product Rebranding Campaign for Sustainability</h3>
-        <p>Group project (ADVC4020): a full rebrand strategy repositioning YETI around verifiable sustainability &mdash; brand audit, new positioning and brand elements, storyboard, and an integrated marketing communications plan, delivered as a narrated presentation. I analyzed YETI's current brand identity and developed the proposed new brand elements and the preliminary marketing program concept.</p>
-        <div class="result">Result: <span>Scored 98, 95 and 93.75 out of 100 across the three project phases</span></div>
-      </div>
-      <div class="case-card">
-        <div class="tag-row"><span>Sales</span><span>Aptive Environmental</span></div>
-        <h3>Sales &amp; Account Growth</h3>
-        <p>Managed 150+ accounts across two sales seasons, exceeding revenue targets while building durable customer relationships.</p>
-        <div class="result">Result: <span>$217K+ in revenue generated</span></div>
-      </div>
-      <div class="case-card">
-        <div class="tag-row"><span>Leadership</span><span>JWU</span></div>
-        <h3>Resident Assistant Leadership</h3>
-        <p>Led community programming and day-to-day support for a residence hall, balancing individual student needs with hall-wide initiatives.</p>
-        <div class="result">Result: <span>60+ residents led, 300+ students supported</span></div>
-      </div>
-      <div class="case-card">
-        <div class="tag-row"><span>Coaching</span><span>Soccer Genome</span></div>
-        <h3>Individual Athlete Coaching</h3>
-        <p>Built a consistent training plan for an athlete whose confidence — not his ability — was holding him back.</p>
-        <div class="result">Result: <span>Moved up to a higher competitive team</span></div>
+<section class="section" id="portfolio">
+  <div class="inner split">
+    <p class="eyebrow-label">Selected work</p>
+    <div class="stack">
+      <h2 class="h2">Proof points, not a skills list.</h2>
+      <p class="sub">Each project below is traceable to a specific mentor, credential, or role, not a generic bullet.</p>
+      <div class="cards">
+
+        <article class="card wide">
+          <p class="featured-label">Featured project</p>
+          <div class="tags"><span>Analytics</span><span>Google Ads</span><span>GA4</span></div>
+          <h3>MealCraft Kitchen: Cross-Channel Campaign Analysis</h3>
+          <p>Case study for my AI for Marketing certification (UNC Charlotte): turned a meal-kit brand's Meta Ads, Google Ads and GA4 data into insight cards with hypotheses, budget moves (stop / scale / shift) and two follow-up tests each, with a primary and guardrail KPI.</p>
+          <div class="chart" role="img" aria-label="Return on ad spend by search segment: brand 3.2x, diet-intent 2.9x, generic 1.4x">
+            <div class="bar-row"><span class="bar-label">Brand search</span><span class="bar" style="width:100%"></span><span class="bar-val">3.2x</span></div>
+            <div class="bar-row"><span class="bar-label">Diet-intent</span><span class="bar" style="width:90.6%"></span><span class="bar-val">2.9x</span></div>
+            <div class="bar-row"><span class="bar-label">Generic "meal kit"</span><span class="bar weak" style="width:43.8%"></span><span class="bar-val">1.4x</span></div>
+            <div class="bar-caption">Return on ad spend by search segment, Jan to Mar 2025 (case-study data)</div>
+          </div>
+          <p class="result"><b>Result:</b> Found brand and diet-intent search returning 3.2x and 2.9x ROAS vs 1.4x for generic terms, and recommended shifting budget toward high-intent keywords.</p>
+        </article>
+
+        <article class="card">
+          <div class="tags"><span>Marketing</span><span>Sherwin-Williams</span></div>
+          <h3>Dímelo Hispanic Pro Playbook</h3>
+          <p>Built a bilingual customer-engagement playbook for Sherwin-Williams' Hispanic Pro segment from surveys, contractor interviews, and purchasing-behavior analysis.</p>
+          <p class="result"><b>Result:</b> 2nd place, district presentation competition.</p>
+        </article>
+
+        <article class="card">
+          <div class="tags"><span>AI</span><span>Automation</span><span>Make.com</span></div>
+          <h3>AI Brand-Reputation Monitor</h3>
+          <p>Built a Make.com automation that collects YouTube comments, batches them with an array aggregator, has OpenAI score sentiment and pull the top themes, and posts a monitoring update to Slack. Debugged the data mapping between modules until the summaries came through reliably.</p>
+          <p class="result"><b>Result:</b> Working YouTube → OpenAI → Slack pipeline that replaces manual comment review.</p>
+        </article>
+
+        <article class="card wide dark" id="fact-or-fib">
+          <div class="tags"><span>AI</span><span>Product</span><span>Bilingual</span></div>
+          <img class="shot" src="fact-or-fib.jpg" alt="Fact or Fib party game screens: room lobby with QR code, a round asking players to pick the real answer, and the final leaderboard with the Golden Fib" loading="lazy">
+          <h3>Fact or Fib: Multiplayer Party Game</h3>
+          <p>Directed ChatGPT as my developer to build a real-time party game for 2 to 8 players in 24 hours. Fact-checked the AI, adapted the jokes into Latin American Spanish instead of translating word for word, wrote bug reports, and pivoted to Firebase security rules when my first setup failed twice. Players join by QR code or invite link, and it plays in English and Spanish.</p>
+          <p class="result"><b>Result:</b> Live game, playtested with friends · <a href="https://fact-or-fib.netlify.app/" target="_blank" rel="noopener">Play it</a> · <a href="https://app.joinhandshake.com/ai-showcase/projects/3564119" target="_blank" rel="noopener">Handshake showcase</a></p>
+        </article>
+
+        <article class="card">
+          <div class="tags"><span>Marketing</span><span>Branding</span><span>ADVC4020</span></div>
+          <h3>YETI Product Rebranding Campaign for Sustainability</h3>
+          <p>Group project (ADVC4020): a full rebrand strategy repositioning YETI around verifiable sustainability, with a brand audit, new positioning and brand elements, storyboard, and an integrated marketing communications plan, delivered as a narrated presentation. I analyzed YETI's current brand identity and developed the proposed new brand elements and the preliminary marketing program concept.</p>
+          <p class="result"><b>Result:</b> Scored 98, 95 and 93.75 out of 100 across the three project phases.</p>
+        </article>
+
+        <article class="card">
+          <div class="tags"><span>Sales</span><span>Aptive Environmental</span></div>
+          <h3>Sales &amp; Account Growth</h3>
+          <p>Managed 150+ accounts across two sales seasons, exceeding revenue targets while building durable customer relationships.</p>
+          <p class="result"><b>Result:</b> $217K+ in revenue generated.</p>
+        </article>
+
+        <article class="card">
+          <div class="tags"><span>Leadership</span><span>JWU</span></div>
+          <h3>Resident Assistant Leadership</h3>
+          <p>Led community programming and day-to-day support for a residence hall, balancing individual student needs with hall-wide initiatives.</p>
+          <p class="result"><b>Result:</b> 60+ residents led, 300+ students supported.</p>
+        </article>
+
+        <article class="card">
+          <div class="tags"><span>Coaching</span><span>Soccer Genome</span></div>
+          <h3>Individual Athlete Coaching</h3>
+          <p>Built a consistent training plan for an athlete whose confidence, not his ability, was holding him back.</p>
+          <p class="result"><b>Result:</b> Moved up to a higher competitive team.</p>
+        </article>
+
       </div>
     </div>
   </div>
 </section>
 
-
-<section id="resume" style="background:#FAFAF8;">
-  <div class="wrap">
-    <div class="section-head">
-      <div class="eyebrow">Credentials</div>
-      <h2>Resume</h2>
-      <p>The scannable version, styled to match the rest of the site. <a href="Luis_Dorta_Resume.pdf" download style="color: var(--gold); font-weight: 600;">Download the one-page PDF</a>.</p>
-    </div>
-    <div class="resume-grid">
-      <div class="resume-block">
-        <h3>Experience</h3>
-        <div class="resume-item">
-          <div class="title">Management &amp; Sales Intern</div>
-          <div class="meta">Sherwin-Williams · Twin Cities District · May 2026 – Aug 2026</div>
-          <p>Co-developed the Dímelo Playbook (2nd of all district internship teams) and volunteered with Hearts &amp; Hammers.</p>
+<section class="section alt" id="resume">
+  <div class="inner split">
+    <p class="eyebrow-label">Credentials</p>
+    <div class="stack">
+      <h2 class="h2">Resume.</h2>
+      <p class="sub">The scannable version, styled to match the rest of the site. <a class="resume-link" href="Luis_Dorta_Resume.pdf" download>Download the one-page PDF</a>.</p>
+      <div class="resume-grid">
+        <div class="resume-block">
+          <h3>Experience</h3>
+          <div class="item">
+            <div class="title">Management &amp; Sales Intern</div>
+            <div class="meta">Sherwin-Williams · Twin Cities District · May 2026 to Aug 2026</div>
+            <p>Co-developed the Dímelo Playbook (2nd of all district internship teams) and volunteered with Hearts &amp; Hammers.</p>
+          </div>
+          <div class="item">
+            <div class="title">Sales Representative &amp; Route Manager</div>
+            <div class="meta">Aptive Environmental · Jan 2023 to Sep 2024</div>
+            <p>Generated $217K+ in revenue across two seasons managing 150+ accounts.</p>
+          </div>
+          <div class="item">
+            <div class="title">Resident Assistant</div>
+            <div class="meta">Johnson &amp; Wales University · Aug 2025 to Present</div>
+            <p>Led programming and support for 60+ residents, 300+ students.</p>
+          </div>
+          <div class="item">
+            <div class="title">Performance Trainer &amp; Marketing Associate</div>
+            <div class="meta">Soccer Genome &amp; Independent Clients · Dec 2024 to Present</div>
+            <p>Train 50+ athletes and families and drive client acquisition through social media, referrals and community marketing.</p>
+          </div>
+          <div class="item">
+            <div class="title">Team Captain (2026) &amp; NCAA DIII Student-Athlete</div>
+            <div class="meta">Johnson &amp; Wales University Men's Soccer · Aug 2023 to Present</div>
+            <p>Three seasons on the roster; selected by coaching staff as captain for the 2026 season.</p>
+          </div>
         </div>
-        <div class="resume-item">
-          <div class="title">Sales Representative &amp; Route Manager</div>
-          <div class="meta">Aptive Environmental · Jan 2023 – Sep 2024</div>
-          <p>Generated $217K+ in revenue across two seasons managing 150+ accounts.</p>
+        <div class="resume-block">
+          <h3>Education</h3>
+          <div class="item">
+            <div class="title">B.S. Marketing &amp; Advertising</div>
+            <div class="meta">Johnson &amp; Wales University · Expected May 2027</div>
+          </div>
+          <h3>Certifications</h3>
+          <div class="chips">
+            <span>AI for Marketing (UNC Charlotte / Ziplines)</span>
+            <span>SAS Data Literacy</span>
+            <span>Excel Skills for Business: Essentials (Macquarie)</span>
+            <a href="https://www.kaggle.com/learn/certification/luisdorta/intro-to-programming" target="_blank" rel="noopener">Intro to Programming (Kaggle)</a>
+            <a href="https://www.kaggle.com/learn/certification/luisdorta/python" target="_blank" rel="noopener">Python (Kaggle)</a>
+          </div>
+          <h3>Skills</h3>
+          <div class="skill-group" style="margin-top:0">Analytics</div>
+          <div class="chips"><span>GA4</span><span>Meta Ads</span><span>Google Ads</span><span>A/B Testing</span><span>SAS</span><span>Advanced Excel</span></div>
+          <div class="skill-group">AI &amp; Automation</div>
+          <div class="chips"><span>Make.com</span><span>Zapier</span><span>PostHog</span><span>Prompt Engineering</span><span>Sentiment Analysis</span></div>
+          <div class="skill-group">Coding &amp; Languages</div>
+          <div class="chips"><span>Python (Kaggle certified)</span><span>Pandas · in progress</span><span>Bilingual: English &amp; Spanish</span></div>
+          <h3>Goals</h3>
+          <p class="body-lg" style="font-size:15px">MBA concentrated in Data Analytics, followed by a marketing/business-analytics role driving measurable growth at a company investing in AI-driven strategy.</p>
         </div>
-        <div class="resume-item">
-          <div class="title">Resident Assistant</div>
-          <div class="meta">Johnson &amp; Wales University · Aug 2025 – Present</div>
-          <p>Led programming and support for 60+ residents, 300+ students.</p>
-        </div>
-        <div class="resume-item">
-          <div class="title">Performance Trainer &amp; Marketing Associate</div>
-          <div class="meta">Soccer Genome &amp; Independent Clients · Dec 2024 – Present</div>
-          <p>Train 50+ athletes and families and drive client acquisition through social media, referrals and community marketing.</p>
-        </div>
-        <div class="resume-item">
-          <div class="title">Team Captain (2026) &amp; NCAA DIII Student-Athlete</div>
-          <div class="meta">Johnson &amp; Wales University Men's Soccer · Aug 2023 – Present</div>
-          <p>Three seasons on the roster; selected by coaching staff as captain for the 2026 season.</p>
-        </div>
-      </div>
-      <div class="resume-block">
-        <h3>Education</h3>
-        <div class="resume-item">
-          <div class="title">B.S. Marketing &amp; Advertising</div>
-          <div class="meta">Johnson &amp; Wales University · Expected May 2027</div>
-        </div>
-        <h3 style="margin-top:30px;">Certifications</h3>
-        <div class="cert-row">
-          <span>AI for Marketing (UNC Charlotte / Ziplines)</span>
-          <span>SAS Data Literacy</span>
-          <span>Excel Skills for Business: Essentials (Macquarie)</span>
-          <span>Intro to Programming (Kaggle)</span>
-        </div>
-        <h3 style="margin-top:30px;">Skills</h3>
-        <div class="skill-group">Analytics</div>
-        <div class="cert-row">
-          <span>GA4</span>
-          <span>Meta Ads</span>
-          <span>Google Ads</span>
-          <span>A/B Testing</span>
-          <span>SAS</span>
-          <span>Advanced Excel</span>
-        </div>
-        <div class="skill-group">AI &amp; Automation</div>
-        <div class="cert-row">
-          <span>Make.com</span>
-          <span>Zapier</span>
-          <span>PostHog</span>
-          <span>Prompt Engineering</span>
-          <span>Sentiment Analysis</span>
-        </div>
-        <div class="skill-group">Learning &amp; Languages</div>
-        <div class="cert-row">
-          <span>Python (Pandas) &middot; in progress</span>
-          <span>Bilingual: English &amp; Spanish</span>
-        </div>
-        <h3 style="margin-top:30px;">Goals</h3>
-        <p style="color:var(--muted); font-size:14px;">MBA concentrated in Data Analytics, followed by a marketing/business-analytics role driving measurable growth at a company investing in AI-driven strategy.</p>
       </div>
     </div>
   </div>
 </section>
 
-<section id="contact">
-  <div class="wrap">
-    <h2>Let's Talk Results.</h2>
-    <p class="lead">Marketing and advertising recruiters, JWU faculty and alumni, and industry mentors — I'd welcome the conversation.</p>
-    <div class="contact-actions">
-      <a href="mailto:luisitodorta@gmail.com" class="btn">Email Me</a>
-      <a href="https://www.linkedin.com/in/luis-dorta-9457a9395" class="btn-outline">Connect on LinkedIn</a>
-      <a href="https://github.com/luis-dorta" class="btn-outline">View My GitHub</a>
+<section class="section alt contact" id="contact">
+  <div class="inner">
+    <h2 class="h2">Let's talk results.</h2>
+    <p class="sub">Marketing and advertising recruiters, JWU faculty and alumni, and industry mentors, I'd welcome the conversation.</p>
+    <div class="actions">
+      <a class="btn" href="mailto:luisitodorta@gmail.com">Email me</a>
+      <a class="btn-ghost" href="https://www.linkedin.com/in/luis-dorta-9457a9395" target="_blank" rel="noopener">Connect on LinkedIn</a>
+      <a class="btn-ghost" href="https://github.com/luis-dorta" target="_blank" rel="noopener">View my GitHub</a>
     </div>
-    <p class="alumni-note">Especially open to conversations through the JWU Alumni Network — always happy to trade notes with fellow Wildcats navigating marketing and business careers.</p>
+    <div class="grid">
+      <a class="tile" href="https://www.linkedin.com/in/luis-dorta-9457a9395" target="_blank" rel="noopener">
+        <span class="tile-top"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/><path d="M10 21V9h4v2a4 4 0 0 1 8 0v10h-4v-9a2 2 0 0 0-4 0v9z"/></svg><svg class="icon arrow" style="width:16px;height:16px" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8"/></svg></span>
+        <span><h4>LinkedIn</h4><p>LinkedIn profile</p></span>
+      </a>
+      <a class="tile" href="https://github.com/luis-dorta" target="_blank" rel="noopener">
+        <span class="tile-top"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M9 19c-4 1.5-4-2.5-6-3m12 5v-3.9a3.4 3.4 0 0 0-.9-2.6c3-.3 6.1-1.5 6.1-6.7A5.2 5.2 0 0 0 18.9 4a4.9 4.9 0 0 0-.1-3.6S17.5.1 14.6 1.9a12.3 12.3 0 0 0-6.4 0C5.3.1 4 .4 4 .4A4.9 4.9 0 0 0 3.9 4 5.2 5.2 0 0 0 2.5 7.7c0 5.2 3.1 6.4 6.1 6.7A3.4 3.4 0 0 0 7.7 17v3.9"/></svg><svg class="icon arrow" style="width:16px;height:16px" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8"/></svg></span>
+        <span><h4>GitHub</h4><p>github.com/luis-dorta</p></span>
+      </a>
+      <a class="tile" href="https://www.kaggle.com/luisdorta" target="_blank" rel="noopener">
+        <span class="tile-top"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M3 5v14c0 1.7 4 3 9 3s9-1.3 9-3V5M3 12c0 1.7 4 3 9 3s9-1.3 9-3"/></svg><svg class="icon arrow" style="width:16px;height:16px" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8"/></svg></span>
+        <span><h4>Kaggle</h4><p>kaggle.com/luisdorta</p></span>
+      </a>
+      <a class="tile" href="https://fact-or-fib.netlify.app/" target="_blank" rel="noopener">
+        <span class="tile-top"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 11h4M8 9v4M15 12h.01M18 10h.01"/><rect x="2" y="6" width="20" height="12" rx="6"/></svg><svg class="icon arrow" style="width:16px;height:16px" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8"/></svg></span>
+        <span><h4>Fact or Fib</h4><p>fact-or-fib.netlify.app</p></span>
+      </a>
+    </div>
+    <p class="note">Especially open to conversations through the JWU Alumni Network. Always happy to trade notes with fellow Wildcats navigating marketing and business careers.</p>
   </div>
 </section>
 
-<footer>
-  <div class="wrap">
-    <span>© 2026 Luis Dorta · Marketing &amp; Advertising, Johnson &amp; Wales University</span>
-    <span><a href="mailto:luisitodorta@gmail.com">luisitodorta@gmail.com</a> · <a href="https://www.linkedin.com/in/luis-dorta-9457a9395">LinkedIn</a> · <a href="https://github.com/luis-dorta">GitHub</a></span>
+<footer class="footer">
+  <div class="inner">
+    <p>© 2026 Luis Dorta · Marketing &amp; Advertising, Johnson &amp; Wales University</p>
+    <nav aria-label="Contact and profiles">
+      <a href="mailto:luisitodorta@gmail.com">luisitodorta@gmail.com</a>
+      <a href="https://www.linkedin.com/in/luis-dorta-9457a9395" target="_blank" rel="noopener">LinkedIn</a>
+      <a href="https://github.com/luis-dorta" target="_blank" rel="noopener">GitHub</a>
+      <a href="https://www.kaggle.com/luisdorta" target="_blank" rel="noopener">Kaggle</a>
+    </nav>
   </div>
 </footer>
 
